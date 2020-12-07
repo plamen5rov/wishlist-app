@@ -10,6 +10,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { AboutComponent } from './pages/about/about.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AboutComponent } from './pages/about/about.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    RouterModule
+    RouterModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
