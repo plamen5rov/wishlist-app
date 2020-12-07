@@ -4,6 +4,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
     imports:[
@@ -11,14 +13,18 @@ import {MatInputModule} from '@angular/material/input';
         MatIconModule,
         MatDividerModule,
         MatFormFieldModule,
-        MatInputModule
+        MatInputModule,
+        MatSidenavModule,
+        MatToolbarModule
     ],
     exports: [
         MatButtonModule,
         MatIconModule,
         MatDividerModule,
         MatFormFieldModule,
-        MatInputModule
+        MatInputModule,
+        MatSidenavModule,
+        MatToolbarModule
     ]
 })
 export class MaterialModule {}
