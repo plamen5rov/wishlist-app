@@ -15,6 +15,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { AllGiftsComponent } from './wishlist/all-gifts/all-gifts.component';
 import { MyGiftsComponent } from './wishlist/my-gifts/my-gifts.component';
 import { GiftComponent } from './wishlist/gift/gift.component';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 
 
@@ -27,7 +29,9 @@ import { GiftComponent } from './wishlist/gift/gift.component';
     AboutComponent,
     AllGiftsComponent,
     MyGiftsComponent,
-    GiftComponent
+    GiftComponent,
+    HeaderComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,
