@@ -1,8 +1,8 @@
-html,
-body {
-  height: 100%;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+.welcome {
+  padding: 20px;
 }
-body {
-  margin: 0;
+
+.div-button {
+  margin: 20px;
+  text-align: center;
 }
