@@ -1,18 +1,24 @@
 <mat-toolbar color="primary">
-    <div fxHide.gt-xs>
-      <button mat-icon-button (click)="onToggleSidenav()">
-        <mat-icon>menu</mat-icon>
-      </button>
-    </div>
-    <div><img src="../assets/images/Red_Gift.png" class="logo-image" /></div>
-    <div><p class="logo-text">Wishlist App</p></div>
-    <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
-      <ul fxLayout fxLayoutGap="10px" class="navigation-items">
-        <li><a routerLink="">Home</a></li>
-        <li><a routerLink="/about">About</a></li>
-        <li><a routerLink="/signup">SignUp</a></li>
-        <li><a routerLink="/login">Login</a></li>
-        <li><a routerLink="/logout">Logout</a></li>
-      </ul>
-    </div>
-  </mat-toolbar>
+  <div fxHide.gt-xs>
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div><img src="../assets/images/Red_Gift.png" class="logo-image" /></div>
+  <div><p class="logo-text">Wishlist App</p></div>
+  <div *ngIf="isAuth" fxFlex fxLayout fxLayoutAlign="center center">
+    <p class="usermail" fxLayout fxLayoutGap="10px">Welcome, {{ user }}</p>
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+      <li><a routerLink="">Home</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li *ngIf="isAuth"><a routerLink="/wishlist">Wishlist</a></li>
+      <li *ngIf="!isAuth"><a routerLink="/signup">SignUp</a></li>
+      <li *ngIf="!isAuth"><a routerLink="/login">Login</a></li>
+      <li *ngIf="isAuth">
+        <a style="cursor: pointer" (click)="onLogout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>

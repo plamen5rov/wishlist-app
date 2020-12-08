@@ -1,34 +1,40 @@
 a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  a:hover,
-  a:active {
-    color: lightcoral;
-  }
-  .navigation-items {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+  text-decoration: none;
+  color: white;
+}
 
-  .nav-caption {
-    display: inline-block;
-    padding-left: 6px;
-  }
-  .logo-image {
-    width: 45px;
-    height: 45px;
-    margin-top: 10px;
-    margin-left: 10px;
-    padding: 0px;
-  }
-  
-  .logo-text {
-    margin-top: 10px;
-    margin-left: 10px;
-    padding: 0px;
-  }
-  
-  
+a:hover,
+a:active {
+  color: lightcoral;
+}
+.navigation-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-caption {
+  display: inline-block;
+  padding-left: 6px;
+}
+.logo-image {
+  width: 45px;
+  height: 45px;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 0px;
+}
+
+.logo-text {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 0px;
+}
+
+.usermail {
+  text-align: center;
+  font-size: 20px;
+  /* display: flex;
+  flex-wrap: wrap;
+  align-content: center; */
+}

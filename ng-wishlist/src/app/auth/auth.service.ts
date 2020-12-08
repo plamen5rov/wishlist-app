@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -10,6 +10,7 @@ import { AuthData } from './auth-data.model';
 export class AuthService {
   authChange = new Subject<boolean>();
   private isAuthenticated = false;
+  @Output() user: string;
 
   constructor(private router: Router, private afAuth: AngularFireAuth) {}
 
@@ -29,6 +30,8 @@ export class AuthService {
       .signInWithEmailAndPassword(authData.email, authData.password)
       .then(result => {
         console.log(result);
+        this.user = result.user.email;
+        console.log(this.user);
         this.authSuccessfully();
       })
       .catch(error => {
