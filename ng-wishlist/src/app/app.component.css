@@ -42,18 +42,4 @@ a:active {
   padding-left: 6px;
 }
 
-.footer {
-  flex: 1 1 auto;
-  margin-bottom: 0px;
-  font-size: 12px;
-  font-stretch: condensed;
-  text-align: center;
-}
 
-.footer-image {
-  width: 45px;
-  height: 45px;
-  margin-top: 20px;
-  margin-left: 10px;
-  padding: 0px;
-}
