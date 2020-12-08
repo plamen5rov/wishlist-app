@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "wishlist-d5160": {
+      "hosting": {
+        "ng-wishlist": [
+          "wishlist-d5160"
+        ]
+      }
+    }
+  }
+}
