@@ -12,6 +12,9 @@ import { LoginComponent } from './auth/login/login.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { AboutComponent } from './pages/about/about.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { AllGiftsComponent } from './wishlist/all-gifts/all-gifts.component';
+import { MyGiftsComponent } from './wishlist/my-gifts/my-gifts.component';
+import { GiftComponent } from './wishlist/gift/gift.component';
 
 
 
@@ -21,7 +24,10 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     SignupComponent,
     LoginComponent,
     WelcomeComponent,
-    AboutComponent
+    AboutComponent,
+    AllGiftsComponent,
+    MyGiftsComponent,
+    GiftComponent
   ],
   imports: [
     BrowserModule,
