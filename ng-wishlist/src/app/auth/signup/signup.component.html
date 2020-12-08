@@ -9,7 +9,7 @@
     <mat-form-field>
       <input
         type="text"
-        name="username"
+        name="name"
         matInput
         ngModel
         required
@@ -50,6 +50,13 @@
       <mat-hint align="end"> {{ pwInput.value?.length }}/ 6</mat-hint>
     </mat-form-field>
 
-    <button mat-raised-button color="primary" type="submit" [disabled]="f.form.invalid">Register</button>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="f.form.invalid"
+    >
+      Register
+    </button>
   </form>
 </section>
