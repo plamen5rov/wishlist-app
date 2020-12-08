@@ -6,9 +6,7 @@
   </div>
   <div><img src="../assets/images/Red_Gift.png" class="logo-image" /></div>
   <div><p class="logo-text">Wishlist App</p></div>
-  <div *ngIf="isAuth" fxFlex fxLayout fxLayoutAlign="center center">
-    <p class="usermail" fxLayout fxLayoutGap="10px">Welcome, {{ user }}</p>
-  </div>
+
   <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
     <ul fxLayout fxLayoutGap="10px" class="navigation-items">
       <li><a routerLink="">Home</a></li>
@@ -21,4 +19,5 @@
       </li>
     </ul>
   </div>
+  
 </mat-toolbar>

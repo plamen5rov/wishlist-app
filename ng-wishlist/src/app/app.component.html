@@ -5,6 +5,9 @@
   <mat-sidenav-content>
     <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
     <main>
+      <div *ngIf="isAuth" fxFlex fxLayout fxLayoutAlign="center center">
+        <p class="usermail" fxLayout fxLayoutGap="10px">Welcome, {{ user }}</p>
+      </div>
       <router-outlet></router-outlet>
     </main>
   </mat-sidenav-content>

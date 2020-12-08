@@ -9,7 +9,7 @@ import { AuthService } from './../../auth/auth.service';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   @Output() sidenavToggle = new EventEmitter<void>();
-  @Input() user: string; 
+  
   isAuth = false;
   authSubscription: Subscription
   
@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     .authChange
     .subscribe(authStatus => {
       this.isAuth = authStatus;
-      this.user = this.authService.user;
+      
       
     });
     
