@@ -22,6 +22,7 @@ import { MyGiftsComponent } from './wishlist/my-gifts/my-gifts.component';
 import { GiftComponent } from './wishlist/gift/gift.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { ShoppingListComponent } from './wishlist/shopping-list/shopping-list.component';
 
 
 
@@ -38,7 +39,8 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     MyGiftsComponent,
     GiftComponent,
     HeaderComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    ShoppingListComponent
   ],
   imports: [
     BrowserModule,
