@@ -1,13 +1,10 @@
 <mat-sidenav-container>
-  <mat-sidenav #sidenav role="navigation"> 
+  <mat-sidenav #sidenav role="navigation">
     <app-sidenav-list (closeSidenav)="sidenav.close()"></app-sidenav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
     <main>
-      <div *ngIf="isAuth" fxFlex fxLayout fxLayoutAlign="center center">
-        <p class="usermail" fxLayout fxLayoutGap="10px">Welcome, {{ user }}</p>
-      </div>
       <router-outlet></router-outlet>
     </main>
   </mat-sidenav-content>
