@@ -1,3 +1,4 @@
+import { WishlistComponent } from './wishlist/wishlist/wishlist.component';
 import { PageNotFoundComponent } from './navigation/page-not-found/page-not-found.component';
 import { ShoppingListComponent } from './wishlist/shopping-list/shopping-list.component';
 import { MyGiftsComponent } from './wishlist/my-gifts/my-gifts.component';
@@ -16,7 +17,7 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'signup', component: SignupComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'wishlist', component: GiftComponent, canActivate: [AuthGuard]},
+  {path: 'wishlist', component: WishlistComponent, canActivate: [AuthGuard]},
   {path: 'all-gifts', component: AllGiftsComponent, canActivate: [AuthGuard]},
   {path: 'my-gifts', component: MyGiftsComponent, canActivate: [AuthGuard]},
   {path: 'gift', component: GiftComponent, canActivate: [AuthGuard]},

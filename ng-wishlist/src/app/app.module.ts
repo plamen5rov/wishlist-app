@@ -24,6 +24,7 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { ShoppingListComponent } from './wishlist/shopping-list/shopping-list.component';
 import { PageNotFoundComponent } from './navigation/page-not-found/page-not-found.component';
+import { WishlistComponent } from './wishlist/wishlist/wishlist.component';
 
 
 
@@ -42,7 +43,8 @@ import { PageNotFoundComponent } from './navigation/page-not-found/page-not-foun
     HeaderComponent,
     SidenavListComponent,
     ShoppingListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,
