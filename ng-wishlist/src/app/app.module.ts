@@ -23,6 +23,7 @@ import { GiftComponent } from './wishlist/gift/gift.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { ShoppingListComponent } from './wishlist/shopping-list/shopping-list.component';
+import { PageNotFoundComponent } from './navigation/page-not-found/page-not-found.component';
 
 
 
@@ -40,7 +41,8 @@ import { ShoppingListComponent } from './wishlist/shopping-list/shopping-list.co
     GiftComponent,
     HeaderComponent,
     SidenavListComponent,
-    ShoppingListComponent
+    ShoppingListComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
