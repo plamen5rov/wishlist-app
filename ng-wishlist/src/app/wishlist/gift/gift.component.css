@@ -1,0 +1,19 @@
+.gift-card {
+    padding: 30px;
+}
+
+.card-button {
+    
+    margin: 2px;
+}
+
+.example-card {
+    max-width: 400px;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
