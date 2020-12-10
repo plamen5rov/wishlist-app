@@ -1,3 +1,5 @@
+import { Gift } from './../gift.module';
+import { GiftService } from './../gift.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./all-gifts.component.css']
 })
 export class AllGiftsComponent implements OnInit {
+  availableGifts: Gift[] = [];
+  constructor(private giftService: GiftService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    this.availableGifts = this.giftService.getAvailableGifts();
   }
 
 }

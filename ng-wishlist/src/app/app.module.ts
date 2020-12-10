@@ -1,3 +1,4 @@
+import { GiftService } from './wishlist/gift.service';
 import { RouterModule } from '@angular/router';
 import { AuthService } from './auth/auth.service';
 import { MaterialModule } from './material.module';
@@ -59,7 +60,7 @@ import { WishlistComponent } from './wishlist/wishlist/wishlist.component';
     AngularFireAuthModule,
     ReactiveFormsModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, GiftService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

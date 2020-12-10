@@ -1,1 +1,33 @@
-<p>all-gifts works!</p>
+<section fxLayout fxLayoutAlign="center" class="gift-card">
+    <ul>
+      <li *ngFor="let gift of availableGifts" [value]="gift.id">
+        <mat-card fxFlex="400px" fxFlex.xs="100%">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{ gift.name }}</mat-card-title>
+            <mat-card-subtitle>{{ gift.occasion }}</mat-card-subtitle>
+          </mat-card-header>
+          <img
+            mat-card-image
+            class="img-card"
+            src="{{ gift.imageUrl }}"
+            alt="gift image"
+          />
+          <mat-card-content>
+            <p>
+              {{ gift.description }}
+            </p>
+          </mat-card-content>
+          <mat-card-actions fxLayoutAlign="center">
+            <button mat-flat-button color="primary" class="card-button">
+              LIKE
+            </button>
+  
+            <button mat-flat-button color="accent" class="card-button">
+              SHARE
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </li>
+    </ul>
+  </section>

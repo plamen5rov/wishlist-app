@@ -1,26 +1,39 @@
-<section fxLayout fxLayoutAlign="center" class="gift-card">
-  <mat-card fxFlex="400px" fxFlex.xs="100%" >
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img
-      mat-card-image
-      src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-      alt="Photo of a Shiba Inu"
-    />
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz
-        breeds of dog from Japan. A small, agile dog that copes very well with
-        mountainous terrain, the Shiba Inu was originally bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions fxLayoutAlign="center">
-      <button mat-flat-button color="primary" class="card-button">LIKE</button>
-      
-      <button mat-flat-button color="accent" class="card-button">SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+<section fxLayout fxLayoutAlign="center">
+  <form
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="20px"
+    #f="ngForm"
+    (ngSubmit)="onSubmit(f)"
+  >
+    <mat-form-field>
+      <mat-label>Product name</mat-label>
+      <input type="text" name="name" matInput ngModel required />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Gift for (occasion)</mat-label>
+      <input type="text" name="occasion" matInput ngModel required />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <input type="text" name="description" matInput ngModel required />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Price (USD)</mat-label>
+      <input type="text" name="price" matInput ngModel required />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Image URL</mat-label>
+      <input type="text" name="imageUrl" matInput ngModel required />
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="f.form.invalid"
+    >
+      Submit
+    </button>
+  </form>
 </section>
