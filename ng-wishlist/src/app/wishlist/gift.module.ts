@@ -3,7 +3,7 @@ export interface Gift {
     name: string;
     occasion: string;
     description: string;
-    date?: Date;
+    date?: string;
     price: number;
     imageUrl: string;
     booked: boolean;
