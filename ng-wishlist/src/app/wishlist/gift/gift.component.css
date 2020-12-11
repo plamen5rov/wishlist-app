@@ -26,3 +26,6 @@
   .add-form {
     padding: 30px;
 }
+mat-form-field {
+  margin-right: 12px;
+}

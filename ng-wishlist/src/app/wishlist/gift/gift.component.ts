@@ -1,7 +1,9 @@
 import { Gift } from './../gift.module';
 import { GiftService } from './../gift.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { AuthService } from 'src/app/auth/auth.service';
+
 
 @Component({
   selector: 'app-gift',
@@ -12,8 +14,9 @@ export class GiftComponent implements OnInit {
   availableGifts: Gift[] = [];
   id:number = Math.floor(Math.random() * 100);
   newGift: Gift;  
+  @Input() user: string;
 
-  constructor(private giftService: GiftService) { }
+  constructor(private giftService: GiftService, private authService: AuthService) { }
 
   ngOnInit() {
     this.availableGifts = this.giftService.getAvailableGifts();
@@ -30,7 +33,7 @@ export class GiftComponent implements OnInit {
       imageUrl: form.value.imageUrl,
 
       booked: false,
-      author: 'bob@bob.com',
+      author: this.authService.user,
     };
 
     this.giftService.addGift(this.newGift);
