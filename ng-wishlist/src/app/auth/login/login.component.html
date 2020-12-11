@@ -1,12 +1,12 @@
-<div class="form-label" fxLayout="column"
-fxLayoutAlign="center center">
-  <button mat-stroked-button color="primary" type="button">LOGIN HERE:</button>
-</div>
 <section class="login-form">
-  <form fxLayout="column" 
-  fxLayoutAlign="center center" 
-  fxLayoutGap="10px" [formGroup]="loginForm" 
-  (ngSubmit)="onSubmit()">
+  <h1 align="center">LOGIN HERE:</h1>
+  <form
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="10px"
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit()"
+  >
     <mat-form-field>
       <input
         type="email"
