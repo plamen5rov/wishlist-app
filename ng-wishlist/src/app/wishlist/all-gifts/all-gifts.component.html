@@ -1,7 +1,7 @@
-<section fxLayout fxLayoutAlign="center" class="gift-card">
+<section fxLayout fxLayoutAlign="center" >
     <ul>
-      <li *ngFor="let gift of availableGifts" [value]="gift.id">
-        <mat-card fxFlex="400px" fxFlex.xs="100%">
+      <li *ngFor="let gift of availableGifts" [value]="gift.name">
+        <mat-card fxFlex="400px" fxFlex.xs="100%" class="gift-card">
           <mat-card-header>
             <div mat-card-avatar class="example-header-image"></div>
             <mat-card-title>{{ gift.name }}</mat-card-title>

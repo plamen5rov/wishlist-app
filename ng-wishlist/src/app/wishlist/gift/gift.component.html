@@ -16,13 +16,13 @@
       <mat-label>Gift for (choose occasion)</mat-label>
       
       <select matNativeControl  name="occasion" matInput ngModel >
-        <option value="birthday">Birthday</option>
-        <option value="wedding">Wedding</option>
-        <option value="new baby">New baby</option>
+        <option value="Birthday">Birthday</option>
+        <option value="Wedding">Wedding</option>
+        <option value="New baby">New baby</option>
         <option value="Christmas">Christmas</option>
         <option value="Mother's Day">Mother's Day</option>
         <option value="Father's Day">Father's Day</option>
-        <option value="other">OTHER</option>
+        <option value="Other">OTHER</option>
       </select>
     </mat-form-field>
     <mat-form-field>
@@ -30,12 +30,7 @@
       <input type="text" name="description" matInput ngModel required />
     </mat-form-field>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Choose a date:</mat-label>
-      <input matInput [matDatepicker]="picker" name="date" ngModel required>
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
+    
 
     <mat-form-field>
       <mat-label>Price (USD)</mat-label>

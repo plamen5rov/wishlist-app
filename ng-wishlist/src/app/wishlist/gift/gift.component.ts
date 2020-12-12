@@ -12,7 +12,7 @@ import { AuthService } from 'src/app/auth/auth.service';
 })
 export class GiftComponent implements OnInit {
   availableGifts: Gift[] = [];
-  id:number = Math.floor(Math.random() * 100);
+  ///id:number = Math.floor(Math.random() * 100);
   @Output() newGift: Gift;  
   @Input() user: string;
 
@@ -28,7 +28,7 @@ export class GiftComponent implements OnInit {
       name: form.value.name,
       occasion: form.value.occasion,
       description: form.value.description,
-      date: form.value.date,
+      //date: form.value.date,
       price: +form.value.price,
       imageUrl: form.value.imageUrl,
 

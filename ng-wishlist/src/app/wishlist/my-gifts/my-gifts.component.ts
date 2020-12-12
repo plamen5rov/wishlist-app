@@ -13,11 +13,11 @@ import { Subscription } from 'rxjs';
 export class MyGiftsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   displayedColumns: string [] = 
-  ["name", "occasion", "date", "price", "author"];
+  ["name", "occasion", "description", "price", "author"];
 
   dataSource = new MatTableDataSource<Gift>();
 
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
 
   private exChangedSubscription: Subscription;
 
