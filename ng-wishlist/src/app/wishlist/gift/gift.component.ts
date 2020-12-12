@@ -1,6 +1,6 @@
 import { Gift } from './../gift.module';
 import { GiftService } from './../gift.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from 'src/app/auth/auth.service';
 
@@ -13,18 +13,18 @@ import { AuthService } from 'src/app/auth/auth.service';
 export class GiftComponent implements OnInit {
   availableGifts: Gift[] = [];
   id:number = Math.floor(Math.random() * 100);
-  newGift: Gift;  
+  @Output() newGift: Gift;  
   @Input() user: string;
 
   constructor(private giftService: GiftService, private authService: AuthService) { }
 
   ngOnInit() {
-    this.availableGifts = this.giftService.getAvailableGifts();
+    //this.availableGifts = this.giftService.fetchAvailableGifts();
   }
   onSubmit(form: NgForm){
     this.newGift =
     {
-      id: this.id,
+      
       name: form.value.name,
       occasion: form.value.occasion,
       description: form.value.description,
@@ -36,9 +36,13 @@ export class GiftComponent implements OnInit {
       author: this.authService.user,
     };
 
-    this.giftService.addGift(this.newGift);
-    console.log (this.newGift);
-    console.log(this.availableGifts);
+    console.log ('New gift:',this.newGift);
+    this.giftService.addNewGift(this.newGift);
+    
+
+    // this.giftService.addNewGift(this.newGift);
+    // console.log (this.newGift);
+    // console.log(this.availableGifts);
 
   }
 

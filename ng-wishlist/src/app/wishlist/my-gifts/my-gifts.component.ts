@@ -20,8 +20,8 @@ export class MyGiftsComponent implements OnInit, AfterViewInit {
   constructor(private giftService: GiftService) { }
 
   ngOnInit() {
-    this.dataSource.data = this.giftService.getAvailableGifts();
-    console.log('Data source:',this.dataSource.data);
+    // this.dataSource.data = this.giftService.getAvailableGifts();
+    // console.log('Data source:',this.dataSource.data);
   }
 
   ngAfterViewInit() {

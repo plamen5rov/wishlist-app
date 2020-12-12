@@ -12,7 +12,7 @@ export class AllGiftsComponent implements OnInit {
   constructor(private giftService: GiftService) { }
 
   ngOnInit() {
-    this.availableGifts = this.giftService.getAvailableGifts();
+    // this.availableGifts = this.giftService.getAvailableGifts();
   }
 
 }

@@ -1,5 +1,5 @@
 export interface Gift {
-    id: number;
+    
     name: string;
     occasion: string;
     description: string;
