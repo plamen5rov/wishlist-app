@@ -10,7 +10,7 @@ export class GiftService {
   giftChanged = new Subject<Gift>();
   giftsChanged = new Subject<Gift[]>();
   myGiftsChanged = new Subject<Gift[]>();
-  private availableGifts: Gift[] = [];
+  //private myGifts: Gift[] = [];
   private giftAdded: Gift;
 
   constructor(private db: AngularFirestore) {}
@@ -51,5 +51,14 @@ export class GiftService {
   
   addNewGift(gift: Gift) {
     this.db.collection('my-gifts').add(gift);
+  }
+
+  fetchMyGifts() {
+    this.db
+      .collection('my-gifts')
+      .valueChanges()
+      .subscribe((gifts: Gift[]) => {
+        this.myGiftsChanged.next(gifts);
+      });
   }
 }
