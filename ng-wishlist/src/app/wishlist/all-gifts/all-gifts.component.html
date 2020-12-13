@@ -1,4 +1,5 @@
-<section fxLayout fxLayoutAlign="center" >
+<div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="20">
+<div>
     <ul>
       <li *ngFor="let gift of availableGifts" [value]="gift.name">
         <mat-card fxFlex="400px" fxFlex.xs="100%" class="gift-card">
@@ -20,7 +21,7 @@
           </mat-card-content>
           <mat-card-actions fxLayoutAlign="center">
             <button mat-flat-button color="primary" class="card-button">
-              LIKE
+              BOOK
             </button>
   
             <button mat-flat-button color="accent" class="card-button">
@@ -30,4 +31,4 @@
         </mat-card>
       </li>
     </ul>
-  </section>
+  </div></div>

@@ -13,22 +13,26 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
-  {path: '', component: WelcomeComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'signup', component: SignupComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'wishlist', component: WishlistComponent, canActivate: [AuthGuard]},
-  {path: 'all-gifts', component: AllGiftsComponent, canActivate: [AuthGuard]},
-  {path: 'my-gifts', component: MyGiftsComponent, canActivate: [AuthGuard]},
-  {path: 'gift', component: GiftComponent, canActivate: [AuthGuard]},
-  {path: 'shopping-list', component: ShoppingListComponent, canActivate: [AuthGuard]},
+  { path: '', component: WelcomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'login', component: LoginComponent },
+
+  { path: 'wishlist', component: WishlistComponent, canActivate: [AuthGuard] },
+  { path: 'all-gifts', component: AllGiftsComponent, canActivate: [AuthGuard] },
+  { path: 'my-gifts', component: MyGiftsComponent, canActivate: [AuthGuard] },
+  { path: 'gift', component: GiftComponent, canActivate: [AuthGuard] },
+  {
+    path: 'shopping-list',
+    component: ShoppingListComponent,
+    canActivate: [AuthGuard],
+  },
   //{path: '**', pathMatch: 'full', component: PageNotFoundComponent}
-  
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [AuthGuard]
+  providers: [AuthGuard],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
