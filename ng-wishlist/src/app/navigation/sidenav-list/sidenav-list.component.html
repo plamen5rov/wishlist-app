@@ -6,13 +6,16 @@
     <a mat-list-item routerLink="/about" (click)="onClose()"
       ><mat-icon>info</mat-icon> <span class="nav-caption">About</span></a
     >
+    <a mat-list-item routerLink="/wishlist" (click)="onClose()"
+      ><mat-icon>redeem</mat-icon> <span class="nav-caption">Wishlist</span></a
+    >
     <a mat-list-item routerLink="/signup" (click)="onClose()"
       ><mat-icon>face</mat-icon> <span class="nav-caption">SignUp</span></a
     >
     <a mat-list-item routerLink="/login" (click)="onClose()"
       ><mat-icon>input</mat-icon> <span class="nav-caption">Login</span></a
     >
-    <a mat-list-item routerLink="/logout" (click)="onClose()"
+    <a mat-list-item routerLink="/logout" (click)="onLogout()"
       ><mat-icon>assignment_return</mat-icon>
       <span class="nav-caption">Logout</span></a
     >
