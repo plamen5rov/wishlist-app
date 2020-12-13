@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Gift } from './../gift.module';
 import { GiftService } from './../gift.service';
 import { Component, Input, OnInit, Output } from '@angular/core';
@@ -16,7 +17,10 @@ export class GiftComponent implements OnInit {
   @Output() newGift: Gift;  
   @Input() user: string;
 
-  constructor(private giftService: GiftService, private authService: AuthService) { }
+  constructor(
+    private giftService: GiftService, 
+    private authService: AuthService,
+    private router: Router) { }
 
   ngOnInit() {
     //this.availableGifts = this.giftService.fetchAvailableGifts();
@@ -38,6 +42,7 @@ export class GiftComponent implements OnInit {
 
     console.log ('New gift:',this.newGift);
     this.giftService.addNewGift(this.newGift);
+    this.router.navigate(['/all-gifts']);
     
 
     // this.giftService.addNewGift(this.newGift);
